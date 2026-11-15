@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}Digital Marketing & Tech Insights Blog | Qbix Solutions{% endblock %}
+
+{% block meta_description %}Discover actionable tips, technical SEO guides, web development best practices, and social media growth strategies on the Qbix Solutions blog.{% endblock %}
+
+{% block seo_metadata %}
+  <link rel="canonical" href="https://qbixsolutions.com/blog.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qbixsolutions.com/blog.html">
+  <meta property="og:title" content="Digital Marketing & Tech Insights Blog | Qbix Solutions">
+  <meta property="og:description" content="Actionable engineering and marketing insights from the founders and specialists at Qbix Solutions.">
+  <meta property="og:image" content="https://qbixsolutions.com/assets/images/portfolio/seo-growth-metrics.jpg">
+{% endblock %}
+
+{% block content %}
+<section class="section" style="padding-top:1rem; padding-bottom:3rem;">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="tagline-pill">
+            <span class="dot"></span>
+            <span>Insights & Industry Intelligence</span>
+          </div>
+          <h1>Digital Marketing & <span class="gradient-text">Engineering Insights</span></h1>
+          <p>
+            Field-tested web development architectures, Core Web Vitals optimization guides, and organic SEO growth tactics from our engineering team.
+          </p>
+        </div>
+
+        <!-- Featured Big Blog Card -->
+        <div class="glass-card-elevated fade-up" style="padding:2.5rem; margin-bottom:4rem;">
+          <div class="results-grid">
+            <div style="aspect-ratio:16/9; border-radius:var(--radius-md); overflow:hidden;">
+              <img src="assets/images/portfolio/footwear-master.jpg" alt="Welcome to the Future of Digital Innovation" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div>
+              <div class="glass-pill" style="margin-bottom:1rem; background:rgba(0,114,255,0.2); color:var(--secondary);">Featured Article &bull; Web Engineering</div>
+              <h2 style="font-size:1.85rem; margin-bottom:1rem;">Welcome to the Future of Digital Innovation – Your Trusted Web Partner</h2>
+              <p style="color:var(--text-secondary); margin-bottom:1.5rem;">
+                A comprehensive look at why modern enterprises are migrating from bloated monolithic templates to sleek Python/Django frameworks, headless architectures, and precision SEO strategies.
+              </p>
+              <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem; font-size:0.88rem; color:var(--text-muted);">
+                <span><i class="fa-regular fa-user" style="color:var(--secondary);"></i> Ravi Bhatasana</span>
+                <span>&bull;</span>
+                <span><i class="fa-regular fa-calendar"></i> Nov 20, 2025</span>
+                <span>&bull;</span>
+                <span><i class="fa-regular fa-clock"></i> 5 Min Read</span>
+              </div>
+              <a href="blog/welcome-to-the-future-of-digital-innovation.html" class="btn btn-primary">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Articles Grid -->
+        <div class="services-grid" style="margin-bottom:5rem;">
+          <!-- Article 2 -->
+          <div class="glass-card service-card fade-up" data-tilt>
+            <div class="portfolio-thumb" style="aspect-ratio:16/9; border-radius:var(--radius-md); margin-bottom:1.25rem;">
+              <img src="assets/images/portfolio/seo-growth-metrics.jpg" alt="SEO Growth in 2026" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="glass-pill" style="align-self:flex-start; margin-bottom:0.85rem;">SEO Strategy &bull; 6 Min Read</div>
+            <h3>How to Achieve +200% Organic Traffic Growth in 2026</h3>
+            <p class="service-desc">
+              A comprehensive breakdown of Core Web Vitals, entity-based schema markup, and high-intent topic clustering that drives real qualified organic inquiries.
+            </p>
+            <div class="service-footer" style="padding-top:1rem; border-top:1px solid rgba(255,255,255,0.08);">
+              <small style="color:var(--text-dim);">By Qbix SEO Team</small>
+              <a href="blog/welcome-to-the-future-of-digital-innovation.html" class="service-learn-more">
+                <span>Read Guide</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="glass-card service-card fade-up" data-tilt>
+            <div class="portfolio-thumb" style="aspect-ratio:16/9; border-radius:var(--radius-md); margin-bottom:1.25rem;">
+              <img src="assets/images/portfolio/minishop-master.jpg" alt="E-Commerce Conversion Secrets" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="glass-pill" style="align-self:flex-start; margin-bottom:0.85rem;">E-Commerce &bull; 4 Min Read</div>
+            <h3>Optimizing E-Commerce Checkout For Zero Cart Abandonment</h3>
+            <p class="service-desc">
+              Key UX adjustments, instant UPI integrations, and session storage tweaks that increased conversion rates by 35% on MiniShop and Footwear Master platforms.
+            </p>
+            <div class="service-footer" style="padding-top:1rem; border-top:1px solid rgba(255,255,255,0.08);">
+              <small style="color:var(--text-dim);">By Montu Loriya</small>
+              <a href="portfolio/minishop-master.html" class="service-learn-more">
+                <span>View Insights</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Article 4 -->
+          <div class="glass-card service-card fade-up" data-tilt>
+            <div class="portfolio-thumb" style="aspect-ratio:16/9; border-radius:var(--radius-md); margin-bottom:1.25rem;">
+              <img src="assets/images/portfolio/physio-life-clinic.jpg" alt="Healthcare Website Local SEO" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="glass-pill" style="align-self:flex-start; margin-bottom:0.85rem;">Healthcare SEO &bull; 5 Min Read</div>
+            <h3>Local SEO Strategies for Doctors & Clinics in Gujarat</h3>
+            <p class="service-desc">
+              How Physio Life Clinic automated appointment scheduling and gained #1 local maps ranking in Morbi with targeted medical schemas and citations.
+            </p>
+            <div class="service-footer" style="padding-top:1rem; border-top:1px solid rgba(255,255,255,0.08);">
+              <small style="color:var(--text-dim);">By Ravi Bhatasana</small>
+              <a href="index.html#testimonial" class="service-learn-more">
+                <span>Read Story</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter Subscription Box -->
+        <div class="glass-card-elevated" style="padding:3rem 2.5rem; text-align:center;">
+          <h2 style="margin-bottom:0.75rem;">Subscribe to <span class="gradient-text">The Qbix Dispatch</span></h2>
+          <p style="max-width:540px; margin:0 auto 2rem; color:var(--text-secondary);">
+            Get monthly SEO updates, web development architectural guides, and digital marketing tips delivered directly to your inbox.
+          </p>
+          <form data-agency-form style="max-width:480px; margin:0 auto; display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <input type="email" name="email" required placeholder="Enter your business email..." style="flex:1; min-width:240px; padding:0.85rem 1.25rem; background:rgba(255,255,255,0.05); border:1px solid var(--glass-border); border-radius:var(--radius-full); color:#fff;">
+            <button type="submit" class="btn btn-primary" style="padding-inline:1.85rem;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Footwear Master E-Commerce Case Study | Qbix Solutions Portfolio{% endblock %}
+
+{% block meta_description %}Read the full case study of Footwear Master — an e-commerce website built with Django, Python, SQLite, Bootstrap 5, and JavaScript by Qbix Solutions.{% endblock %}
+
+{% block seo_metadata %}
+  <link rel="canonical" href="https://qbixsolutions.com/portfolio/footwear-master.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://qbixsolutions.com/portfolio/footwear-master.html">
+  <meta property="og:title" content="Footwear Master E-Commerce Case Study | Qbix Solutions">
+  <meta property="og:description" content="Technical architecture, design challenges, and live demo of Footwear Master e-commerce platform.">
+  <meta property="og:image" content="https://qbixsolutions.com/assets/images/portfolio/footwear-master.jpg">
+{% endblock %}
+
+{% block content %}
+<article class="section" style="padding-top:1rem; padding-bottom:4rem;">
+      <div class="container" style="max-width:980px;">
+        <!-- Breadcrumb -->
+        <div style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          <a href="../index.html" style="color:var(--secondary);">Home</a> &bull; 
+          <a href="../portfolio.html" style="color:var(--secondary);">Portfolio</a> &bull; 
+          <span>Footwear Master</span>
+        </div>
+
+        <div class="section-header fade-up" style="text-align:left; margin-bottom:2.5rem;">
+          <div class="glass-pill" style="margin-bottom:1rem; background:rgba(0,114,255,0.2); color:var(--secondary);">E-Commerce Case Study</div>
+          <h1>Footwear Master — Full-Featured <span class="gradient-text">E-Commerce Storefront</span></h1>
+          <p style="font-size:1.15rem;">
+            A responsive, database-driven footwear retail platform engineered for seamless shopping, real-time inventory tracking, and dynamic cart management.
+          </p>
+        </div>
+
+        <!-- Featured Project Image -->
+        <div class="glass-card fade-up" style="border-radius:var(--radius-lg); overflow:hidden; margin-bottom:3rem;">
+          <img src="../assets/images/portfolio/footwear-master.jpg" alt="Footwear Master Interface" style="width:100%; height:auto;">
+        </div>
+
+        <!-- Project Meta Strip -->
+        <div class="glass-card-elevated fade-up" style="padding:1.75rem 2rem; margin-bottom:3.5rem;">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:1.25rem;">
+            <div>
+              <div style="font-size:0.8rem; color:var(--text-dim); text-transform:uppercase;">Category</div>
+              <strong style="color:#fff; font-size:1.05rem;">E-Commerce Web</strong>
+            </div>
+            <div>
+              <div style="font-size:0.8rem; color:var(--text-dim); text-transform:uppercase;">Delivered Date</div>
+              <strong style="color:#fff; font-size:1.05rem;">Sept 16, 2025</strong>
+            </div>
+            <div>
+              <div style="font-size:0.8rem; color:var(--text-dim); text-transform:uppercase;">Tech Stack</div>
+              <strong style="color:var(--secondary); font-size:1.05rem;">Django, Python, SQLite</strong>
+            </div>
+            <div>
+              <div style="font-size:0.8rem; color:var(--text-dim); text-transform:uppercase;">Live Prototype</div>
+              <a href="https://bhavesh5433.pythonanywhere.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:0.25rem;">
+                Visit Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study Breakdown -->
+        <div class="glass-card" style="padding:3rem 2.5rem; margin-bottom:3.5rem;">
+          <h2 style="margin-bottom:1.25rem;">Project <span class="gradient-text">Overview & Objectives</span></h2>
+          <p>
+            Footwear Master required an ultra-clean, mobile-responsive online shopping experience designed to highlight footwear collections with rich visuals, instant size/color variant selection, and a smooth checkout funnel.
+          </p>
+          <p>
+            Qbix Solutions was commissioned to architect the end-to-end backend, responsive frontend templates, and dynamic cart recalculation system with zero third-party dependency bloat.
+          </p>
+
+          <h3 style="margin-top:2.5rem; margin-bottom:1rem;">Key Features & Architectural Highlights</h3>
+          <ul style="display:flex; flex-direction:column; gap:0.85rem; margin-bottom:2rem;">
+            <li class="deliverable-item"><i class="fa-solid fa-circle-check"></i> <strong>Dynamic Category Filtering:</strong> Instant client-side and server-side filtering across Men, Women, Casual, and Athletic categories.</li>
+            <li class="deliverable-item"><i class="fa-solid fa-circle-check"></i> <strong>Cart & Wishlist Logic:</strong> Persistent user sessions with real-time subtotal, tax, and shipping estimation calculations.</li>
+            <li class="deliverable-item"><i class="fa-solid fa-circle-check"></i> <strong>Secure User Authentication:</strong> Encrypted password hashing, profile dashboard, and complete customer order history.</li>
+            <li class="deliverable-item"><i class="fa-solid fa-circle-check"></i> <strong>Admin Catalog Management:</strong> Custom Django admin controls allowing the store owner to add SKUs, upload variant photography, and monitor stock levels.</li>
+          </ul>
+
+          <h3 style="margin-top:2.5rem; margin-bottom:1rem;">Results & Impact</h3>
+          <p>
+            The platform achieved a sub-1.2 second average page load time, a 95+ PageSpeed mobile score, and a streamlined 3-step checkout that reduced cart friction significantly.
+          </p>
+        </div>
+
+        <!-- Back to Portfolio CTA -->
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <a href="../portfolio.html" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+          <a href="../contact.html#consultation" class="btn btn-primary">Build Your E-Commerce Store <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </article>
+{% endblock %}

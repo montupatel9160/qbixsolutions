@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>{% block title %}Qbix Solutions | Digital Marketing & Creative Agency India{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}Qbix Solutions is a results-driven digital marketing, SEO, and web development agency helping businesses & startups scale globally. Based in Morbi, Gujarat, India.{% endblock %}">
+  
+  {% block seo_metadata %}
+  <meta name="keywords" content="Qbix Solutions, digital marketing agency India, SEO services Morbi, web development agency, creative agency, social media management, ecommerce development, Python Django web design">
+  <meta name="author" content="Qbix Solutions">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://qbixsolutions.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qbixsolutions.com/">
+  <meta property="og:title" content="Qbix Solutions | Digital Marketing & Creative Agency India">
+  <meta property="og:description" content="Scale your business with high-performance web development, technical SEO, and creative digital marketing. 50+ delivered projects worldwide.">
+  <meta property="og:image" content="https://qbixsolutions.com/assets/images/portfolio/footwear-master.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://qbixsolutions.com/">
+  <meta name="twitter:title" content="Qbix Solutions | Digital Marketing & Creative Agency India">
+  <meta name="twitter:description" content="Scale your business with high-performance web development, technical SEO, and creative digital marketing. 50+ delivered projects worldwide.">
+  <meta name="twitter:image" content="https://qbixsolutions.com/assets/images/portfolio/footwear-master.jpg">
+  {% endblock %}
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ base_path | default('') }}assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ base_path | default('') }}assets/images/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="{{ base_path | default('') }}assets/images/favicon-192x192.png">
+
+  <!-- Stylesheets & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="{{ base_path | default('') }}assets/css/style.css">
+  {% block page_css %}{% endblock %}
+
+  <!-- Three.js (Hero interactive 3D cube) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <!-- Main Script -->
+  <script src="{{ base_path | default('') }}assets/js/main.js" defer></script>
+  {% block page_scripts %}{% endblock %}
+</head>
+<body class="page-{{ active_page | default('page') }}">
+
+  <!-- Background Cyber Pattern -->
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+
+  <!-- Site Header & Frosted Glass Smart Sticky Navbar -->
+  <header class="site-header" id="site-header">
+    <div class="container navbar">
+      <a href="{{ base_path | default('') }}index.html" class="brand-logo" aria-label="Qbix Solutions Home">
+        <img src="{{ base_path | default('') }}assets/images/logo-white.png" alt="Qbix Solutions Logo" width="180" height="48">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-item">
+          <a href="{{ base_path | default('') }}index.html" class="nav-link {% if active_page == 'home' %}active{% endif %}">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="{{ base_path | default('') }}about.html" class="nav-link {% if active_page == 'about' %}active{% endif %}">About Us</a>
+        </div>
+        <div class="nav-item nav-item-has-dropdown" id="desktop-services-item">
+          <div class="nav-link-dropdown-wrap">
+            <a href="{{ base_path | default('') }}services.html" class="nav-link nav-link-text {% if active_page == 'services' %}active{% endif %}">Services</a>
+            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Services Dropdown" aria-expanded="false" aria-controls="desktop-services-dropdown">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+          <div class="nav-dropdown" id="desktop-services-dropdown" role="region" aria-label="Services Categories">
+            <a href="{{ base_path | default('') }}services/web-development.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-code"></i></span>
+              <div>
+                <strong>Web Development</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">Custom Sites, E-commerce, Apps</small>
+              </div>
+            </a>
+            <a href="{{ base_path | default('') }}services/seo-optimization.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-chart-line"></i></span>
+              <div>
+                <strong>SEO Optimization</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">Technical & On-Page Rankings</small>
+              </div>
+            </a>
+            <a href="{{ base_path | default('') }}services/social-media-management.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-share-nodes"></i></span>
+              <div>
+                <strong>Social Media Management</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">Instagram & Facebook Growth</small>
+              </div>
+            </a>
+            <a href="{{ base_path | default('') }}services/graphic-design.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-pen-nib"></i></span>
+              <div>
+                <strong>Graphic Design</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">Branding, Ads & Social Posts</small>
+              </div>
+            </a>
+            <a href="{{ base_path | default('') }}services/video-editing.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-video"></i></span>
+              <div>
+                <strong>Video Editing</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">Reels, Shorts & YouTube Promos</small>
+              </div>
+            </a>
+            <a href="{{ base_path | default('') }}services/content-creation.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-feather-pointed"></i></span>
+              <div>
+                <strong>Content Creation</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">High-Converting Copy & Blogs</small>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="{{ base_path | default('') }}portfolio.html" class="nav-link {% if active_page == 'portfolio' %}active{% endif %}">Portfolio</a>
+        </div>
+        <div class="nav-item">
+          <a href="{{ base_path | default('') }}blog.html" class="nav-link {% if active_page == 'blog' %}active{% endif %}">Blog</a>
+        </div>
+        <div class="nav-item">
+          <a href="{{ base_path | default('') }}careers.html" class="nav-link {% if active_page == 'careers' %}active{% endif %}">Careers</a>
+        </div>
+        <div class="nav-item">
+          <a href="{{ base_path | default('') }}contact.html" class="nav-link {% if active_page == 'contact' %}active{% endif %}">Contact</a>
+        </div>
+      </nav>
+
+      <!-- Nav CTA & Accessible Mobile Hamburger -->
+      <div class="nav-actions">
+        <a href="{{ base_path | default('') }}contact.html#consultation" class="btn btn-primary btn-sm">
+          <span>Get Free Consultation</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle-btn" type="button" aria-label="Toggle Navigation Drawer" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <span class="toggle-bar bar-1"></span>
+          <span class="toggle-bar bar-2"></span>
+          <span class="toggle-bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="drawer-header">
+        <a href="{{ base_path | default('') }}index.html">
+          <img src="{{ base_path | default('') }}assets/images/logo-white.png" alt="Qbix Solutions" width="140" style="height:36px; width:auto; object-fit:contain;">
+        </a>
+        <button class="drawer-close" type="button" aria-label="Close Mobile Drawer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="drawer-links">
+        <a href="{{ base_path | default('') }}index.html" class="drawer-link {% if active_page == 'home' %}active{% endif %}">
+          <span>Home</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="{{ base_path | default('') }}about.html" class="drawer-link {% if active_page == 'about' %}active{% endif %}">
+          <span>About Us</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+
+        <!-- Mobile Services Split Item -->
+        <div class="drawer-dropdown-item">
+          <div class="drawer-split-row">
+            <a href="{{ base_path | default('') }}services.html" class="drawer-split-text {% if active_page == 'services' %}active{% endif %}">
+              <span>Services</span>
+            </a>
+            <button type="button" class="drawer-arrow-btn" aria-label="Toggle Service Categories List" aria-expanded="false" aria-controls="drawer-services-list">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+          <div class="drawer-sublinks-container" id="drawer-services-list">
+            <a href="{{ base_path | default('') }}services/web-development.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-code"></i></span>
+              <span>Web Development</span>
+            </a>
+            <a href="{{ base_path | default('') }}services/seo-optimization.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-chart-line"></i></span>
+              <span>SEO Optimization</span>
+            </a>
+            <a href="{{ base_path | default('') }}services/social-media-management.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-share-nodes"></i></span>
+              <span>Social Media Management</span>
+            </a>
+            <a href="{{ base_path | default('') }}services/graphic-design.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-pen-nib"></i></span>
+              <span>Graphic Design</span>
+            </a>
+            <a href="{{ base_path | default('') }}services/video-editing.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-video"></i></span>
+              <span>Video Editing</span>
+            </a>
+            <a href="{{ base_path | default('') }}services/content-creation.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-feather-pointed"></i></span>
+              <span>Content Creation</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="{{ base_path | default('') }}portfolio.html" class="drawer-link {% if active_page == 'portfolio' %}active{% endif %}">
+          <span>Portfolio</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="{{ base_path | default('') }}blog.html" class="drawer-link {% if active_page == 'blog' %}active{% endif %}">
+          <span>Blog</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="{{ base_path | default('') }}careers.html" class="drawer-link {% if active_page == 'careers' %}active{% endif %}">
+          <span>Careers</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="{{ base_path | default('') }}contact.html" class="drawer-link {% if active_page == 'contact' %}active{% endif %}">
+          <span>Contact</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;">
+      <a href="{{ base_path | default('') }}contact.html#consultation" class="btn btn-primary" style="width:100%; margin-bottom:0.75rem;">
+        Get Free Consultation
+      </a>
+      <a href="https://wa.me/919016592958" class="btn btn-whatsapp" style="width:100%;" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Block -->
+  <main id="main-content" class="{% if active_page == 'home' %}main-home{% else %}main-inner{% endif %}">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Common Site Footer -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="{{ base_path | default('') }}index.html" class="brand-logo">
+            <img src="{{ base_path | default('') }}assets/images/logo-white.png" alt="Qbix Solutions" width="180" height="48" style="height:44px; width:auto; object-fit:contain;">
+          </a>
+          <p>
+            Qbix Solutions is a full-service digital agency specializing in custom web engineering, technical SEO, performance branding, and multimedia content.
+          </p>
+          <div style="display:flex; gap:0.75rem; margin-top:1.25rem;">
+            <a href="https://www.linkedin.com/in/ravi-bhatasana-179273340/" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/qbixsolutions" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/919016592958" target="_blank" rel="noopener" class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <div class="footer-links">
+            <a href="{{ base_path | default('') }}index.html">Home</a>
+            <a href="{{ base_path | default('') }}about.html">About Us</a>
+            <a href="{{ base_path | default('') }}services.html">All Services</a>
+            <a href="{{ base_path | default('') }}portfolio.html">Portfolio & Work</a>
+            <a href="{{ base_path | default('') }}blog.html">Industry Insights</a>
+            <a href="{{ base_path | default('') }}careers.html">Join Our Team</a>
+            <a href="{{ base_path | default('') }}contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Agency Services</h4>
+          <div class="footer-links">
+            <a href="{{ base_path | default('') }}services/web-development.html">Web Development</a>
+            <a href="{{ base_path | default('') }}services/seo-optimization.html">SEO Optimization</a>
+            <a href="{{ base_path | default('') }}services/social-media-management.html">Social Media Growth</a>
+            <a href="{{ base_path | default('') }}services/graphic-design.html">Graphic Design</a>
+            <a href="{{ base_path | default('') }}services/video-editing.html">Video Editing</a>
+            <a href="{{ base_path | default('') }}services/content-creation.html">Content Creation</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>Morbi, Gujarat, India &bull; Global Operations</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><a href="tel:+919016592958">+91 90165 92958</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div><a href="mailto:ravibhatasana@gmail.com">ravibhatasana@gmail.com</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>Mon – Sat: 09:00 AM – 06:00 PM IST</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> <strong>Qbix Solutions</strong>. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="{{ base_path | default('') }}privacy.html">Privacy Policy</a>
+          <a href="{{ base_path | default('') }}terms.html">Terms of Service</a>
+          <a href="{{ base_path | default('') }}cookies.html">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

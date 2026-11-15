@@ -4,65 +4,212 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <!-- Primary SEO Meta Tags -->
   <title>Cookie Policy | Qbix Solutions</title>
   <meta name="description" content="Cookie Policy for Qbix Solutions. Clear explanations of essential, analytical, and marketing cookies used on our website.">
+  
   <link rel="canonical" href="https://qbixsolutions.com/cookies.html">
 
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon-192x192.png">
+
+  <!-- Stylesheets & Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Three.js (Hero interactive 3D cube) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <!-- Main Script -->
   <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body class="page-cookies">
 
-  <div id="scroll-progress" aria-hidden="true"></div>
+  <!-- Background Cyber Pattern -->
   <div class="bg-grid-pattern" aria-hidden="true"></div>
 
+  <!-- Site Header & Frosted Glass Smart Sticky Navbar -->
   <header class="site-header" id="site-header">
     <div class="container navbar">
-      <a href="index.html" class="brand-logo"><img src="assets/images/logo-white.png" alt="Qbix Solutions Logo" width="180" height="48"></a>
-      <nav class="nav-menu">
-        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
-        <div class="nav-item"><a href="about.html" class="nav-link">About Us</a></div>
-        <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
-        <div class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></div>
-        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      <a href="index.html" class="brand-logo" aria-label="Qbix Solutions Home">
+        <img src="assets/images/logo-white.png" alt="Qbix Solutions Logo" width="180" height="48">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link ">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="about.html" class="nav-link ">About Us</a>
+        </div>
+        <div class="nav-item nav-item-has-dropdown" id="desktop-services-item">
+          <div class="nav-link-dropdown-wrap">
+            <a href="services.html" class="nav-link nav-link-text ">Services</a>
+            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Services Dropdown" aria-expanded="false" aria-controls="desktop-services-dropdown">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+          <div class="nav-dropdown" id="desktop-services-dropdown" role="region" aria-label="Services Categories">
+            <a href="services/web-development.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-code"></i></span>
+              <div>
+                <strong>Web Development</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">Custom Sites, E-commerce, Apps</small>
+              </div>
+            </a>
+            <a href="services/seo-optimization.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-chart-line"></i></span>
+              <div>
+                <strong>SEO Optimization</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">Technical & On-Page Rankings</small>
+              </div>
+            </a>
+            <a href="services/social-media-management.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-share-nodes"></i></span>
+              <div>
+                <strong>Social Media Management</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">Instagram & Facebook Growth</small>
+              </div>
+            </a>
+            <a href="services/graphic-design.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-pen-nib"></i></span>
+              <div>
+                <strong>Graphic Design</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">Branding, Ads & Social Posts</small>
+              </div>
+            </a>
+            <a href="services/video-editing.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-video"></i></span>
+              <div>
+                <strong>Video Editing</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">Reels, Shorts & YouTube Promos</small>
+              </div>
+            </a>
+            <a href="services/content-creation.html" class="dropdown-link">
+              <span class="dropdown-icon"><i class="fa-solid fa-feather-pointed"></i></span>
+              <div>
+                <strong>Content Creation</strong>
+                <small style="display:block; color:var(--text-dim); font-size:0.75rem;">High-Converting Copy & Blogs</small>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="portfolio.html" class="nav-link ">Portfolio</a>
+        </div>
+        <div class="nav-item">
+          <a href="blog.html" class="nav-link ">Blog</a>
+        </div>
+        <div class="nav-item">
+          <a href="careers.html" class="nav-link ">Careers</a>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link ">Contact</a>
+        </div>
       </nav>
+
+      <!-- Nav CTA & Accessible Mobile Hamburger -->
       <div class="nav-actions">
-        <a href="contact.html#consultation" class="btn btn-primary btn-sm"><span>Get Free Consultation</span></a>
-      </div>
-    <button class="mobile-toggle" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars-staggered"></i></button>
+        <a href="contact.html#consultation" class="btn btn-primary btn-sm">
+          <span>Get Free Consultation</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle-btn" type="button" aria-label="Toggle Navigation Drawer" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <span class="toggle-bar bar-1"></span>
+          <span class="toggle-bar bar-2"></span>
+          <span class="toggle-bar bar-3"></span>
+        </button>
       </div>
     </div>
   </header>
 
   <!-- Mobile Navigation Drawer -->
   <div class="drawer-overlay" aria-hidden="true"></div>
-  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
     <div>
       <div class="drawer-header">
-        <img src="assets/images/logo-white.png" alt="Qbix Solutions" width="140">
-        <button class="drawer-close" aria-label="Close Mobile Drawer"><i class="fa-solid fa-xmark"></i></button>
+        <a href="index.html">
+          <img src="assets/images/logo-white.png" alt="Qbix Solutions" width="140" style="height:36px; width:auto; object-fit:contain;">
+        </a>
+        <button class="drawer-close" type="button" aria-label="Close Mobile Drawer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
       <div class="drawer-links">
-        <a href="index.html" class="drawer-link">Home <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="about.html" class="drawer-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="services.html" class="drawer-link">All Services <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="portfolio.html" class="drawer-link">Portfolio <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="blog.html" class="drawer-link">Blog <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="careers.html" class="drawer-link">Careers <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="contact.html" class="drawer-link">Contact <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="index.html" class="drawer-link ">
+          <span>Home</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="about.html" class="drawer-link ">
+          <span>About Us</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+
+        <!-- Mobile Services Split Item -->
+        <div class="drawer-dropdown-item">
+          <div class="drawer-split-row">
+            <a href="services.html" class="drawer-split-text ">
+              <span>Services</span>
+            </a>
+            <button type="button" class="drawer-arrow-btn" aria-label="Toggle Service Categories List" aria-expanded="false" aria-controls="drawer-services-list">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+          <div class="drawer-sublinks-container" id="drawer-services-list">
+            <a href="services/web-development.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-code"></i></span>
+              <span>Web Development</span>
+            </a>
+            <a href="services/seo-optimization.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-chart-line"></i></span>
+              <span>SEO Optimization</span>
+            </a>
+            <a href="services/social-media-management.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-share-nodes"></i></span>
+              <span>Social Media Management</span>
+            </a>
+            <a href="services/graphic-design.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-pen-nib"></i></span>
+              <span>Graphic Design</span>
+            </a>
+            <a href="services/video-editing.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-video"></i></span>
+              <span>Video Editing</span>
+            </a>
+            <a href="services/content-creation.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-feather-pointed"></i></span>
+              <span>Content Creation</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="portfolio.html" class="drawer-link ">
+          <span>Portfolio</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="blog.html" class="drawer-link ">
+          <span>Blog</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="careers.html" class="drawer-link ">
+          <span>Careers</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="contact.html" class="drawer-link ">
+          <span>Contact</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
       </div>
     </div>
-    <div style="margin-top:2rem;">
-      <a href="contact.html#consultation" class="btn btn-primary" style="width:100%; margin-bottom:0.75rem;">Get Free Consultation</a>
-      <a href="https://wa.me/919016592958" class="btn btn-whatsapp" style="width:100%;" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+    <div style="margin-top:1.5rem;">
+      <a href="contact.html#consultation" class="btn btn-primary" style="width:100%; margin-bottom:0.75rem;">
+        Get Free Consultation
+      </a>
+      <a href="https://wa.me/919016592958" class="btn btn-whatsapp" style="width:100%;" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </a>
     </div>
   </aside>
 
-
-  <main style="padding-top: calc(var(--nav-height) + 3rem);">
-    <section class="section" style="padding-top:1rem; padding-bottom:4rem;">
+  <!-- Main Content Block -->
+  <main id="main-content" class="main-inner">
+<section class="section" style="padding-top:1rem; padding-bottom:4rem;">
       <div class="container" style="max-width:860px;">
         <div class="section-header fade-up" style="text-align:left; margin-bottom:2.5rem;">
           <div class="tagline-pill"><span class="dot"></span> <span>Cookie Preferences</span></div>
@@ -113,14 +260,76 @@
     </section>
   </main>
 
+  <!-- Common Site Footer -->
   <footer class="site-footer" id="footer">
     <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/images/logo-white.png" alt="Qbix Solutions" width="180" height="48" style="height:44px; width:auto; object-fit:contain;">
+          </a>
+          <p>
+            Qbix Solutions is a full-service digital agency specializing in custom web engineering, technical SEO, performance branding, and multimedia content.
+          </p>
+          <div style="display:flex; gap:0.75rem; margin-top:1.25rem;">
+            <a href="https://www.linkedin.com/in/ravi-bhatasana-179273340/" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/qbixsolutions" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/919016592958" target="_blank" rel="noopener" class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">All Services</a>
+            <a href="portfolio.html">Portfolio & Work</a>
+            <a href="blog.html">Industry Insights</a>
+            <a href="careers.html">Join Our Team</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Agency Services</h4>
+          <div class="footer-links">
+            <a href="services/web-development.html">Web Development</a>
+            <a href="services/seo-optimization.html">SEO Optimization</a>
+            <a href="services/social-media-management.html">Social Media Growth</a>
+            <a href="services/graphic-design.html">Graphic Design</a>
+            <a href="services/video-editing.html">Video Editing</a>
+            <a href="services/content-creation.html">Content Creation</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>Morbi, Gujarat, India &bull; Global Operations</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><a href="tel:+919016592958">+91 90165 92958</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div><a href="mailto:ravibhatasana@gmail.com">ravibhatasana@gmail.com</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>Mon – Sat: 09:00 AM – 06:00 PM IST</div>
+          </div>
+        </div>
+      </div>
+
       <div class="footer-bottom">
         <div>&copy; <span class="current-year">2026</span> <strong>Qbix Solutions</strong>. All Rights Reserved.</div>
         <div class="footer-legal-links">
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Service</a>
-          <a href="cookies.html" style="color:var(--secondary);">Cookie Policy</a>
+          <a href="cookies.html">Cookie Policy</a>
         </div>
       </div>
     </div>

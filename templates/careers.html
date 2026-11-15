@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Careers at Qbix Solutions | Join Our Digital Engineering Team{% endblock %}
+
+{% block meta_description %}Explore career opportunities at Qbix Solutions. We are always looking for talented Python/Django engineers, SEO analysts, UI/UX designers, and video editors in Morbi and remote.{% endblock %}
+
+{% block seo_metadata %}
+  <link rel="canonical" href="https://qbixsolutions.com/careers.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qbixsolutions.com/careers.html">
+  <meta property="og:title" content="Careers at Qbix Solutions | Join Our Team">
+  <meta property="og:description" content="Work on cutting-edge full-stack web applications and digital marketing campaigns.">
+  <meta property="og:image" content="https://qbixsolutions.com/assets/images/team/ravi-bhatasana.jpg">
+{% endblock %}
+
+{% block content %}
+<section class="section" style="padding-top:1rem; padding-bottom:3rem;">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="tagline-pill">
+            <span class="dot"></span>
+            <span>Join Our Mission</span>
+          </div>
+          <h1>Build Your Career with <span class="gradient-text">Qbix Solutions</span></h1>
+          <p>
+            We are assembling a high-caliber team of engineers, growth strategists, and visual storytellers in Morbi, Gujarat, with flexible hybrid and remote options.
+          </p>
+        </div>
+
+        <!-- Perks & Culture Grid -->
+        <div class="services-grid" style="margin-bottom:4rem;">
+          <div class="glass-card service-card fade-up" data-tilt>
+            <div class="service-icon-box"><i class="fa-solid fa-laptop-house"></i></div>
+            <h3>Hybrid & Remote Flexibility</h3>
+            <p>Work from our headquarters in Morbi or collaborate remotely with modern asynchronous tooling and flexible working hours.</p>
+          </div>
+
+          <div class="glass-card service-card fade-up" data-tilt>
+            <div class="service-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Learning & Upskilling Stipend</h3>
+            <p>We actively fund certifications, online development courses, and technical books to keep your engineering skills at the cutting edge.</p>
+          </div>
+
+          <div class="glass-card service-card fade-up" data-tilt>
+            <div class="service-icon-box"><i class="fa-solid fa-rocket"></i></div>
+            <h3>High-Impact Real Projects</h3>
+            <p>Direct exposure to live commercial applications, e-commerce storefronts, and international client campaigns from day one.</p>
+          </div>
+
+          <div class="glass-card service-card fade-up" data-tilt>
+            <div class="service-icon-box"><i class="fa-solid fa-people-group"></i></div>
+            <h3>Mentorship from Founders</h3>
+            <p>Work directly alongside CTO Ravi Bhatasana and backend lead Montu Loriya with hands-on code reviews and strategic growth planning.</p>
+          </div>
+
+          <div class="glass-card service-card fade-up" data-tilt>
+            <div class="service-icon-box"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>Work-Life Balance</h3>
+            <p>Predictable working hours (Mon–Sat 09:00 AM – 06:00 PM; Sundays completely off) and a supportive, burnout-free studio culture.</p>
+          </div>
+
+          <div class="glass-card service-card fade-up" data-tilt>
+            <div class="service-icon-box"><i class="fa-solid fa-award"></i></div>
+            <h3>Performance Bonuses</h3>
+            <p>Meritocratic profit sharing, performance-driven project bonuses, and rapid progression opportunities as the agency scales.</p>
+          </div>
+        </div>
+
+        <!-- Open Roles / Talent Pool Submission -->
+        <div class="glass-card-elevated" style="padding:3.5rem 3rem; margin-bottom:4rem;">
+          <div class="consultation-grid">
+            <div>
+              <div class="tagline-pill"><span class="dot"></span> <span>Current Openings</span></div>
+              <h2>Open Talent Pool <span class="gradient-text">Invitations</span></h2>
+              <p>
+                While we do not have fixed departmental vacancies active today, we are always eager to meet high-performing individuals for future projects and contract roles.
+              </p>
+              <div style="display:flex; flex-direction:column; gap:0.85rem; margin-top:1.5rem;">
+                <div class="deliverable-item"><i class="fa-solid fa-circle-check"></i> <span>Python / Django Backend Developers</span></div>
+                <div class="deliverable-item"><i class="fa-solid fa-circle-check"></i> <span>Frontend Engineers (HTML/CSS/JS, React)</span></div>
+                <div class="deliverable-item"><i class="fa-solid fa-circle-check"></i> <span>Technical SEO Analysts & Content Writers</span></div>
+                <div class="deliverable-item"><i class="fa-solid fa-circle-check"></i> <span>Short-Form Video Editors (Premiere, After Effects)</span></div>
+              </div>
+              <p style="margin-top:2rem; font-size:0.9rem; color:var(--text-muted);">
+                You can also email your resume and portfolio directly to <a href="mailto:careers@qbixsolution.com" style="color:var(--secondary); font-weight:600;">careers@qbixsolution.com</a>
+              </p>
+            </div>
+
+            <!-- Application Form -->
+            <form data-agency-form class="glass-card" style="padding:2.5rem; background:rgba(11,25,48,0.75);">
+              <h3 style="margin-bottom:1.25rem;">Submit Expression of Interest</h3>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="career-name">Full Name *</label>
+                  <input type="text" id="career-name" name="name" required placeholder="e.g. Rahul Patel">
+                </div>
+                <div class="form-group">
+                  <label for="career-email">Email Address *</label>
+                  <input type="email" id="career-email" name="email" required placeholder="rahul@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="career-phone">Phone Number *</label>
+                  <input type="tel" id="career-phone" name="phone" required placeholder="+91 90165 92958">
+                </div>
+                <div class="form-group">
+                  <label for="career-role">Desired Role *</label>
+                  <select id="career-role" name="service" required>
+                    <option value="Web Development">Python / Django Developer</option>
+                    <option value="Frontend Development">Frontend Developer (React/JS)</option>
+                    <option value="SEO Specialist">SEO & Content Strategist</option>
+                    <option value="Video Editor">Video Editor & Motion Designer</option>
+                    <option value="Graphic Designer">UI/UX & Graphic Designer</option>
+                    <option value="Other">Other / General Expression</option>
+                  </select>
+                </div>
+                <div class="form-group full-width">
+                  <label for="career-portfolio">Portfolio / GitHub / LinkedIn URL *</label>
+                  <input type="url" id="career-portfolio" name="portfolio" required placeholder="https://github.com/yourusername">
+                </div>
+                <div class="form-group full-width">
+                  <label for="career-message">Brief Introduction & Experience *</label>
+                  <textarea id="career-message" name="message" rows="3" required placeholder="Tell us about your background, key technologies, and why you'd like to work with Qbix Solutions..."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%; margin-top:1.25rem;">
+                <span>Submit Profile</span> <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

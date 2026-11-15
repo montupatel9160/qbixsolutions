@@ -1,15 +1,18 @@
 /**
  * Qbix Solutions — Core Interactive Scripts
- * Features: Three.js 3D Interactive WebGL Cube, Live Stats Counter,
- * Interactive Price Estimator, FAQ Filter & Search, Mobile Drawer, Cookie Consent, Forms
+ * Features: Three.js 3D Interactive WebGL Cube, Smart Sticky Header,
+ * Responsive Desktop & Mobile Split Navigation, Price Estimator,
+ * FAQ Accordion, Cookie Consent, Forms
+ * Note: Count-up animations strictly disabled per design specification.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initDynamicYear();
   initScrollEffects();
   initMobileNavigation();
+  initServicesNavigation();
   init3DHeroCanvas();
-  initStatsCounters();
+  initStaticStats();
   initPortfolioFilter();
   initTechFilter();
   initPriceEstimator();
@@ -31,58 +34,93 @@ function initDynamicYear() {
 }
 
 /* ==========================================================================
-   2. Scroll Effects: Sticky Nav, Progress Bar & Smooth Scroll
+   2. Smart Sticky Header & Scroll Effects (Scroll-Up/Down Behavior)
    ========================================================================== */
 function initScrollEffects() {
   const header = document.querySelector('.site-header');
-  const progressBar = document.getElementById('scroll-progress');
+  const drawer = document.querySelector('.mobile-nav-drawer');
+
+  let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+  let ticking = false;
 
   window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    
-    // Header background change
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  function handleScroll() {
+    const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Header styling & smart scroll hide/show
     if (header) {
-      if (scrollY > 40) {
+      // Background styling
+      if (currentScrollY > 25) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
       }
-    }
 
-    // Scroll progress bar
-    if (progressBar) {
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (docHeight > 0) {
-        const progress = (scrollY / docHeight) * 100;
-        progressBar.style.width = `${progress}%`;
+      const isDrawerOpen = drawer && drawer.classList.contains('open');
+
+      // Top of the page: header is always visible
+      if (currentScrollY <= 15) {
+        header.classList.remove('header-hidden');
+      } else if (!isDrawerOpen) {
+        const delta = currentScrollY - lastScrollY;
+        const scrollThreshold = 8; // Prevent jitter on micro-scrolls
+
+        if (delta > scrollThreshold && currentScrollY > 75) {
+          // User is scrolling DOWN: smoothly hide header
+          header.classList.add('header-hidden');
+          // Close any open desktop dropdowns to prevent orphaned menus
+          document.querySelectorAll('.nav-item.open, .nav-item-has-dropdown.open').forEach(el => {
+            el.classList.remove('open');
+            const btn = el.querySelector('.nav-dropdown-trigger');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          });
+        } else if (delta < -scrollThreshold) {
+          // User is scrolling UP: smoothly reveal header
+          header.classList.remove('header-hidden');
+        }
       }
     }
-  }, { passive: true });
 
-  // Smooth scroll for internal links
+    lastScrollY = Math.max(0, currentScrollY);
+  }
+
+  // Smooth scroll for internal anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
-      if (targetId === '#' || targetId === '') return;
+      if (!targetId || targetId === '#' || targetId.length < 2) return;
       
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        e.preventDefault();
-        const headerOffset = 90;
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      try {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          const headerOffset = 85;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      } catch (err) {
+        // Fallback for selectors that might fail
       }
     });
   });
 }
 
 /* ==========================================================================
-   3. Mobile Navigation Drawer
+   3. Accessible Mobile Navigation Toggle & Drawer
    ========================================================================== */
 function initMobileNavigation() {
   const toggleBtn = document.querySelector('.mobile-toggle');
@@ -92,25 +130,176 @@ function initMobileNavigation() {
 
   if (!toggleBtn || !drawer) return;
 
+  // Ensure ARIA attributes
+  toggleBtn.setAttribute('aria-expanded', 'false');
+  toggleBtn.setAttribute('aria-controls', 'mobile-nav-drawer');
+  drawer.setAttribute('id', 'mobile-nav-drawer');
+
+  let isTransitioning = false;
+
   function openDrawer() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+
     drawer.classList.add('open');
     if (overlay) overlay.classList.add('open');
+    toggleBtn.classList.add('is-active');
+    toggleBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+
+    // Bring header into view if hidden
+    const header = document.querySelector('.site-header');
+    if (header) header.classList.remove('header-hidden');
+
+    setTimeout(() => {
+      isTransitioning = false;
+      if (closeBtn) closeBtn.focus();
+    }, 300);
   }
 
   function closeDrawer() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+
     drawer.classList.remove('open');
     if (overlay) overlay.classList.remove('open');
+    toggleBtn.classList.remove('is-active');
+    toggleBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+
+    setTimeout(() => {
+      isTransitioning = false;
+      toggleBtn.focus();
+    }, 300);
   }
 
-  toggleBtn.addEventListener('click', openDrawer);
-  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-  if (overlay) overlay.addEventListener('click', closeDrawer);
+  function toggleDrawer(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (drawer.classList.contains('open')) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  }
 
-  // Close when clicking any link inside drawer
+  // Bind toggle click
+  toggleBtn.removeEventListener('click', toggleDrawer);
+  toggleBtn.addEventListener('click', toggleDrawer);
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeDrawer();
+    });
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', closeDrawer);
+  }
+
+  // Keyboard accessibility: ESC key to close drawer
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      closeDrawer();
+    }
+  });
+
+  // Close drawer when regular navigation links are clicked
   drawer.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeDrawer);
+    // Only close if it's not a toggle button
+    link.addEventListener('click', () => {
+      // Small timeout allows navigation to trigger cleanly
+      setTimeout(closeDrawer, 120);
+    });
+  });
+}
+
+/* ==========================================================================
+   3B. Desktop & Mobile Services Dropdown Navigation
+   ========================================================================== */
+function initServicesNavigation() {
+  // Desktop Services Dropdown Arrow Click & Keyboard
+  const desktopItems = document.querySelectorAll('.nav-item-has-dropdown');
+  desktopItems.forEach(item => {
+    const trigger = item.querySelector('.nav-dropdown-trigger');
+    const dropdown = item.querySelector('.nav-dropdown');
+
+    if (trigger && dropdown) {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = item.classList.contains('open');
+
+        // Close other dropdowns
+        desktopItems.forEach(other => {
+          if (other !== item) {
+            other.classList.remove('open');
+            const otherTrigger = other.querySelector('.nav-dropdown-trigger');
+            if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        if (isOpen) {
+          item.classList.remove('open');
+          trigger.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('open');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  });
+
+  // Close desktop dropdown on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-item-has-dropdown')) {
+      desktopItems.forEach(item => {
+        item.classList.remove('open');
+        const trigger = item.querySelector('.nav-dropdown-trigger');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Mobile Drawer Services Split Row & Sublinks
+  const mobileDropdownRows = document.querySelectorAll('.drawer-dropdown-item');
+  mobileDropdownRows.forEach(row => {
+    const textLink = row.querySelector('.drawer-split-text');
+    const arrowBtn = row.querySelector('.drawer-arrow-btn');
+    const sublinks = row.querySelector('.drawer-sublinks-container');
+
+    if (arrowBtn && sublinks) {
+      arrowBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isExpanded = sublinks.classList.contains('is-expanded');
+
+        if (isExpanded) {
+          sublinks.classList.remove('is-expanded');
+          arrowBtn.classList.remove('is-active');
+          arrowBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          sublinks.classList.add('is-expanded');
+          arrowBtn.classList.add('is-active');
+          arrowBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+
+    // Text link navigates normally (does NOT toggle dropdown)
+    if (textLink) {
+      textLink.addEventListener('click', () => {
+        // Clicking Services text goes directly to services.html
+        const drawer = document.querySelector('.mobile-nav-drawer');
+        const overlay = document.querySelector('.drawer-overlay');
+        const toggleBtn = document.querySelector('.mobile-toggle');
+        if (drawer) drawer.classList.remove('open');
+        if (overlay) overlay.classList.remove('open');
+        if (toggleBtn) toggleBtn.classList.remove('is-active');
+        document.body.style.overflow = '';
+      });
+    }
   });
 }
 
@@ -305,43 +494,17 @@ function init3DHeroCanvas() {
 }
 
 /* ==========================================================================
-   5. Statistics Counters (Fixes F-06: Initial Real Numbers, Animated on Scroll)
+   5. Static Metric Display (Strict Prohibition: NO Count-Up Animations)
    ========================================================================== */
-function initStatsCounters() {
+function initStaticStats() {
+  // Ensure all stat elements display their final fixed values immediately without any counting animation
   const statElements = document.querySelectorAll('.stat-number');
-  if (!statElements.length) return;
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const targetValue = parseInt(el.getAttribute('data-target'), 10);
-        if (isNaN(targetValue)) return;
-
-        animateValue(el, 0, targetValue, 1800);
-        obs.unobserve(el);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  statElements.forEach(el => observer.observe(el));
-
-  function animateValue(obj, start, end, duration) {
-    let startTimestamp = null;
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      // Ease out cubic
-      const easeProgress = 1 - Math.pow(1 - progress, 3);
-      obj.textContent = Math.floor(easeProgress * (end - start) + start);
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      } else {
-        obj.textContent = end;
-      }
-    };
-    window.requestAnimationFrame(step);
-  }
+  statElements.forEach(el => {
+    const target = el.getAttribute('data-target');
+    if (target && (!el.textContent || el.textContent.trim() === '' || el.textContent.trim() === '0')) {
+      el.textContent = target;
+    }
+  });
 }
 
 /* ==========================================================================

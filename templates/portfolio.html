@@ -1,0 +1,299 @@
+{% extends "base.html" %}
+
+{% block title %}Client Portfolio & Web Projects | Qbix Solutions India{% endblock %}
+
+{% block meta_description %}Explore Qbix Solutions portfolio of 50+ successful web development and digital marketing projects. Featuring live e-commerce demos, clinical booking portals, and SEO case studies.{% endblock %}
+
+{% block seo_metadata %}
+  <link rel="canonical" href="https://qbixsolutions.com/portfolio.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qbixsolutions.com/portfolio.html">
+  <meta property="og:title" content="Client Portfolio & Web Projects | Qbix Solutions India">
+  <meta property="og:description" content="Explore live e-commerce platforms, medical booking websites, and organic SEO growth case studies delivered by Qbix Solutions.">
+  <meta property="og:image" content="https://qbixsolutions.com/assets/images/portfolio/footwear-master.jpg">
+{% endblock %}
+
+{% block content %}
+<section class="section" style="padding-top:1rem; padding-bottom:3rem;">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="tagline-pill">
+            <span class="dot"></span>
+            <span>Proof of Craftsmanship</span>
+          </div>
+          <h1>Featured Work & <span class="gradient-text">Case Studies</span></h1>
+          <p>
+            Explore our delivered platforms, live software demos, and validated digital growth campaigns across diverse business sectors.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="portfolio-filter-tabs fade-up">
+          <button class="portfolio-tab-btn active" data-filter="all">All Showcase</button>
+          <button class="portfolio-tab-btn" data-filter="web">Web Development</button>
+          <button class="portfolio-tab-btn" data-filter="seo">SEO Optimization</button>
+          <button class="portfolio-tab-btn" data-filter="social">Social Media</button>
+          <button class="portfolio-tab-btn" data-filter="graphic">Graphic Design</button>
+          <button class="portfolio-tab-btn" data-filter="video">Video Editing</button>
+          <button class="portfolio-tab-btn" data-filter="content">Content Creation</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="portfolio-grid" style="margin-bottom:5rem;">
+          <!-- 1. Footwear Master -->
+          <div class="glass-card portfolio-item fade-up" data-category="web">
+            <div class="portfolio-thumb">
+              <span class="portfolio-badge-category">Web Development</span>
+              <img src="assets/images/portfolio/footwear-master.jpg" alt="Footwear Master E-commerce Website">
+            </div>
+            <div class="portfolio-body">
+              <div>
+                <h3>Footwear Master E-Commerce</h3>
+                <p>
+                  A complete athletic footwear retail platform engineered with Python and Django. Features footwear attribute filtering, instant cart calculations, wishlist storage, and customer order management.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="tech-tag">Django</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">SQLite</span>
+                  <span class="tech-tag">Bootstrap 5</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+              <div class="portfolio-actions">
+                <a href="https://bhavesh5433.pythonanywhere.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                  <span>Live Demo</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="portfolio/footwear-master.html" class="btn btn-secondary btn-sm">
+                  <span>Full Case Study</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. MiniShop Master -->
+          <div class="glass-card portfolio-item fade-up" data-category="web">
+            <div class="portfolio-thumb">
+              <span class="portfolio-badge-category">Web Development</span>
+              <img src="assets/images/portfolio/minishop-master.jpg" alt="MiniShop Master E-Commerce Platform">
+            </div>
+            <div class="portfolio-body">
+              <div>
+                <h3>MiniShop Master Electronics</h3>
+                <p>
+                  Feature-packed electronics marketplace with faceted search filters, promotional discount coupons, real-time order status tracking, and comprehensive admin dashboard.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Django</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Vanilla JS</span>
+                  <span class="tech-tag">HTML5/CSS3</span>
+                </div>
+              </div>
+              <div class="portfolio-actions">
+                <a href="https://montuloriya.pythonanywhere.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                  <span>Live Demo</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="portfolio/minishop-master.html" class="btn btn-secondary btn-sm">
+                  <span>Full Case Study</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Physio Life Clinic Web Portal -->
+          <div class="glass-card portfolio-item fade-up" data-category="web">
+            <div class="portfolio-thumb">
+              <span class="portfolio-badge-category">Web Development</span>
+              <img src="assets/images/portfolio/physio-life-clinic.jpg" alt="Physio Life Clinic Patient Portal">
+            </div>
+            <div class="portfolio-body">
+              <div>
+                <h3>Physio Life Clinic Platform</h3>
+                <p>
+                  Modern digital portal for Dr. Nildeep Dava's clinic. Built to automate patient intake, facilitate online timeslot booking, showcase doctor credentials, and optimize local search rankings.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="tech-tag">Full-Stack Web</span>
+                  <span class="tech-tag">Booking Engine</span>
+                  <span class="tech-tag">Local SEO</span>
+                  <span class="tech-tag">Mobile Responsive</span>
+                </div>
+              </div>
+              <div class="portfolio-actions">
+                <a href="portfolio/physio-life-clinic.html" class="btn btn-secondary btn-sm">
+                  <span>Full Case Study</span>
+                </a>
+                <a href="contact.html#consultation" class="btn btn-primary btn-sm">
+                  <span>Inquire Similar</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Global SEO Growth Campaign -->
+          <div class="glass-card portfolio-item fade-up" data-category="seo">
+            <div class="portfolio-thumb">
+              <span class="portfolio-badge-category">SEO Optimization</span>
+              <img src="assets/images/portfolio/seo-growth-metrics.jpg" alt="Organic SEO Growth Campaign">
+            </div>
+            <div class="portfolio-body">
+              <div>
+                <h3>+240% Organic Traffic Surge</h3>
+                <p>
+                  Multi-channel SEO and entity-based content architecture delivering +240% organic traffic growth within 6 months, scaling to over 2.1M monthly impressions with top Google rankings.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="tech-tag">Technical SEO</span>
+                  <span class="tech-tag">Content Clusters</span>
+                  <span class="tech-tag">Schema.org</span>
+                  <span class="tech-tag">Link Outreach</span>
+                </div>
+              </div>
+              <div class="portfolio-actions">
+                <a href="portfolio/seo-growth-campaign.html" class="btn btn-secondary btn-sm">
+                  <span>Full Case Study</span>
+                </a>
+                <a href="services/seo-optimization.html" class="btn btn-primary btn-sm">
+                  <span>Explore SEO <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Social Media Growth Campaign -->
+          <div class="glass-card portfolio-item fade-up" data-category="social">
+            <div class="portfolio-thumb">
+              <span class="portfolio-badge-category">Social Media</span>
+              <img src="assets/images/portfolio/footwear-master.jpg" alt="Social Media Brand Presence">
+            </div>
+            <div class="portfolio-body">
+              <div>
+                <h3>Multi-Platform Social Growth & Brand Authority</h3>
+                <p>
+                  High-hook vertical video reels, educational carousels, and proactive community management expanding audience reach and converting follower inquiries into customers.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="tech-tag">Meta Business</span>
+                  <span class="tech-tag">Reels Strategy</span>
+                  <span class="tech-tag">Content Calendars</span>
+                  <span class="tech-tag">Community Management</span>
+                </div>
+              </div>
+              <div class="portfolio-actions">
+                <a href="portfolio/social-media-brand-campaign.html" class="btn btn-secondary btn-sm">
+                  <span>Full Case Study</span>
+                </a>
+                <a href="services/social-media-management.html" class="btn btn-primary btn-sm">
+                  <span>Social Services <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Graphic Design & Brand Identity -->
+          <div class="glass-card portfolio-item fade-up" data-category="graphic">
+            <div class="portfolio-thumb">
+              <span class="portfolio-badge-category">Graphic Design</span>
+              <img src="assets/images/portfolio/minishop-master.jpg" alt="Brand Identity Design">
+            </div>
+            <div class="portfolio-body">
+              <div>
+                <h3>Brand Visual Identity & Marketing Collateral</h3>
+                <p>
+                  Unified vector logo systems, color palette tokens, typography rules, and high-CTR social media advertising creatives engineered for maximum brand recall.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="tech-tag">Adobe Illustrator</span>
+                  <span class="tech-tag">Figma</span>
+                  <span class="tech-tag">Ad Creatives</span>
+                  <span class="tech-tag">Brand Standards</span>
+                </div>
+              </div>
+              <div class="portfolio-actions">
+                <a href="portfolio/brand-identity-design.html" class="btn btn-secondary btn-sm">
+                  <span>Full Case Study</span>
+                </a>
+                <a href="services/graphic-design.html" class="btn btn-primary btn-sm">
+                  <span>Design Services <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Video Editing & Motion Graphics -->
+          <div class="glass-card portfolio-item fade-up" data-category="video">
+            <div class="portfolio-thumb">
+              <span class="portfolio-badge-category">Video Editing</span>
+              <img src="assets/images/portfolio/footwear-master.jpg" alt="Video Editing Production">
+            </div>
+            <div class="portfolio-body">
+              <div>
+                <h3>High-Retention Reels & Commercial Promos</h3>
+                <p>
+                  Pacing optimization, visual pattern interrupts, kinetic on-screen captions, and rich sound design maximizing watch time across modern social video algorithms.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="tech-tag">Premiere Pro</span>
+                  <span class="tech-tag">After Effects</span>
+                  <span class="tech-tag">Sound Design</span>
+                  <span class="tech-tag">Vertical Video</span>
+                </div>
+              </div>
+              <div class="portfolio-actions">
+                <a href="portfolio/promotional-video-production.html" class="btn btn-secondary btn-sm">
+                  <span>Full Case Study</span>
+                </a>
+                <a href="services/video-editing.html" class="btn btn-primary btn-sm">
+                  <span>Video Services <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Content Creation & Copywriting -->
+          <div class="glass-card portfolio-item fade-up" data-category="content">
+            <div class="portfolio-thumb">
+              <span class="portfolio-badge-category">Content Creation</span>
+              <img src="assets/images/portfolio/seo-growth-metrics.jpg" alt="Content Creation Architecture">
+            </div>
+            <div class="portfolio-body">
+              <div>
+                <h3>Search-Intent Content Architecture & Copywriting</h3>
+                <p>
+                  Long-form topical pillar articles, high-converting product landing page copy, and automated email lead nurture sequences engineered to drive commercial conversions.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="tech-tag">SEO Copywriting</span>
+                  <span class="tech-tag">Topic Clusters</span>
+                  <span class="tech-tag">Landing Page Copy</span>
+                  <span class="tech-tag">Email Sequences</span>
+                </div>
+              </div>
+              <div class="portfolio-actions">
+                <a href="portfolio/content-strategy-suite.html" class="btn btn-secondary btn-sm">
+                  <span>Full Case Study</span>
+                </a>
+                <a href="services/content-creation.html" class="btn btn-primary btn-sm">
+                  <span>Content Services <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Request Banner -->
+        <div class="glass-card-elevated" style="padding:3.5rem; text-align:center;">
+          <h2 style="margin-bottom:1rem;">Have a Project In Mind?</h2>
+          <p style="max-width:580px; margin:0 auto 2rem; color:var(--text-secondary);">
+            Let's discuss how we can build a tailor-made digital solution that achieves your business goals.
+          </p>
+          <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+            <a href="contact.html#consultation" class="btn btn-primary btn-lg">Request Free Consultation</a>
+            <a href="https://wa.me/919016592958" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

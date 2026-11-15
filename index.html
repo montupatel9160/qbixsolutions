@@ -7,39 +7,18 @@
   <!-- Primary SEO Meta Tags -->
   <title>Qbix Solutions | Digital Marketing & Creative Web Agency India</title>
   <meta name="description" content="Qbix Solutions is a results-driven digital marketing, SEO, and web development agency helping businesses & startups scale globally. Based in Morbi, Gujarat, India.">
-  <meta name="keywords" content="Qbix Solutions, digital marketing agency India, SEO services Morbi, web development agency, creative agency, social media management, ecommerce development, Python Django web design">
-  <meta name="author" content="Qbix Solutions">
-  <meta name="robots" content="index, follow">
+  
   <link rel="canonical" href="https://qbixsolutions.com/">
-
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://qbixsolutions.com/">
   <meta property="og:title" content="Qbix Solutions | Digital Marketing & Creative Agency India">
   <meta property="og:description" content="Scale your business with high-performance web development, technical SEO, and creative digital marketing. 50+ delivered projects worldwide.">
   <meta property="og:image" content="https://qbixsolutions.com/assets/images/portfolio/footwear-master.jpg">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://qbixsolutions.com/">
   <meta name="twitter:title" content="Qbix Solutions | Digital Marketing & Creative Agency India">
   <meta name="twitter:description" content="Scale your business with high-performance web development, technical SEO, and creative digital marketing. 50+ delivered projects worldwide.">
   <meta name="twitter:image" content="https://qbixsolutions.com/assets/images/portfolio/footwear-master.jpg">
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192x192.png">
-  <link rel="apple-touch-icon" href="assets/images/favicon-192x192.png">
-
-  <!-- Stylesheets & Fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- Three.js for 3D Cyber Cube -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
-
-  <!-- Structured Data Schema (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -87,16 +66,27 @@
     ]
   }
   </script>
-</head>
-<body>
 
-  <!-- Top Scroll Progress Indicator -->
-  <div id="scroll-progress" aria-hidden="true"></div>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon-192x192.png">
+
+  <!-- Stylesheets & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Three.js (Hero interactive 3D cube) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <!-- Main Script -->
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="page-home">
 
   <!-- Background Cyber Pattern -->
   <div class="bg-grid-pattern" aria-hidden="true"></div>
 
-  <!-- Site Header & Frosted Glass Navbar -->
+  <!-- Site Header & Frosted Glass Smart Sticky Navbar -->
   <header class="site-header" id="site-header">
     <div class="container navbar">
       <a href="index.html" class="brand-logo" aria-label="Qbix Solutions Home">
@@ -109,13 +99,16 @@
           <a href="index.html" class="nav-link active">Home</a>
         </div>
         <div class="nav-item">
-          <a href="about.html" class="nav-link">About Us</a>
+          <a href="about.html" class="nav-link ">About Us</a>
         </div>
-        <div class="nav-item">
-          <a href="services.html" class="nav-link">
-            Services <i class="fa-solid fa-chevron-down"></i>
-          </a>
-          <div class="nav-dropdown">
+        <div class="nav-item nav-item-has-dropdown" id="desktop-services-item">
+          <div class="nav-link-dropdown-wrap">
+            <a href="services.html" class="nav-link nav-link-text ">Services</a>
+            <button type="button" class="nav-dropdown-trigger" aria-label="Toggle Services Dropdown" aria-expanded="false" aria-controls="desktop-services-dropdown">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+          <div class="nav-dropdown" id="desktop-services-dropdown" role="region" aria-label="Services Categories">
             <a href="services/web-development.html" class="dropdown-link">
               <span class="dropdown-icon"><i class="fa-solid fa-code"></i></span>
               <div>
@@ -161,27 +154,29 @@
           </div>
         </div>
         <div class="nav-item">
-          <a href="portfolio.html" class="nav-link">Portfolio</a>
+          <a href="portfolio.html" class="nav-link ">Portfolio</a>
         </div>
         <div class="nav-item">
-          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="blog.html" class="nav-link ">Blog</a>
         </div>
         <div class="nav-item">
-          <a href="careers.html" class="nav-link">Careers</a>
+          <a href="careers.html" class="nav-link ">Careers</a>
         </div>
         <div class="nav-item">
-          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="contact.html" class="nav-link ">Contact</a>
         </div>
       </nav>
 
-      <!-- Nav CTA & Mobile Hamburger -->
+      <!-- Nav CTA & Accessible Mobile Hamburger -->
       <div class="nav-actions">
-        <a href="#consultation" class="btn btn-primary btn-sm">
+        <a href="contact.html#consultation" class="btn btn-primary btn-sm">
           <span>Get Free Consultation</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
-        <button class="mobile-toggle" aria-label="Toggle Navigation Drawer">
-          <i class="fa-solid fa-bars-staggered"></i>
+        <button class="mobile-toggle" id="mobile-toggle-btn" type="button" aria-label="Toggle Navigation Drawer" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <span class="toggle-bar bar-1"></span>
+          <span class="toggle-bar bar-2"></span>
+          <span class="toggle-bar bar-3"></span>
         </button>
       </div>
     </div>
@@ -189,44 +184,89 @@
 
   <!-- Mobile Navigation Drawer -->
   <div class="drawer-overlay" aria-hidden="true"></div>
-  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
     <div>
       <div class="drawer-header">
-        <img src="assets/images/logo-white.png" alt="Qbix Solutions" width="140">
-        <button class="drawer-close" aria-label="Close Mobile Drawer">
+        <a href="index.html">
+          <img src="assets/images/logo-white.png" alt="Qbix Solutions" width="140" style="height:36px; width:auto; object-fit:contain;">
+        </a>
+        <button class="drawer-close" type="button" aria-label="Close Mobile Drawer">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
       <div class="drawer-links">
-        <a href="index.html" class="drawer-link active">Home <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="about.html" class="drawer-link">About Us <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="services.html" class="drawer-link">All Services <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="services/web-development.html" class="drawer-link" style="padding-left:1.8rem; font-size:0.92rem; color:var(--text-muted);">&bull; Web Development</a>
-        <a href="services/seo-optimization.html" class="drawer-link" style="padding-left:1.8rem; font-size:0.92rem; color:var(--text-muted);">&bull; SEO Optimization</a>
-        <a href="services/social-media-management.html" class="drawer-link" style="padding-left:1.8rem; font-size:0.92rem; color:var(--text-muted);">&bull; Social Media</a>
-        <a href="services/graphic-design.html" class="drawer-link" style="padding-left:1.8rem; font-size:0.92rem; color:var(--text-muted);">&bull; Graphic Design</a>
-        <a href="services/video-editing.html" class="drawer-link" style="padding-left:1.8rem; font-size:0.92rem; color:var(--text-muted);">&bull; Video Editing</a>
-        <a href="services/content-creation.html" class="drawer-link" style="padding-left:1.8rem; font-size:0.92rem; color:var(--text-muted);">&bull; Content Creation</a>
-        <a href="portfolio.html" class="drawer-link">Portfolio <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="blog.html" class="drawer-link">Blog <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="careers.html" class="drawer-link">Careers <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="contact.html" class="drawer-link">Contact <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="index.html" class="drawer-link active">
+          <span>Home</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="about.html" class="drawer-link ">
+          <span>About Us</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+
+        <!-- Mobile Services Split Item -->
+        <div class="drawer-dropdown-item">
+          <div class="drawer-split-row">
+            <a href="services.html" class="drawer-split-text ">
+              <span>Services</span>
+            </a>
+            <button type="button" class="drawer-arrow-btn" aria-label="Toggle Service Categories List" aria-expanded="false" aria-controls="drawer-services-list">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+          <div class="drawer-sublinks-container" id="drawer-services-list">
+            <a href="services/web-development.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-code"></i></span>
+              <span>Web Development</span>
+            </a>
+            <a href="services/seo-optimization.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-chart-line"></i></span>
+              <span>SEO Optimization</span>
+            </a>
+            <a href="services/social-media-management.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-share-nodes"></i></span>
+              <span>Social Media Management</span>
+            </a>
+            <a href="services/graphic-design.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-pen-nib"></i></span>
+              <span>Graphic Design</span>
+            </a>
+            <a href="services/video-editing.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-video"></i></span>
+              <span>Video Editing</span>
+            </a>
+            <a href="services/content-creation.html" class="drawer-sublink">
+              <span class="sublink-icon"><i class="fa-solid fa-feather-pointed"></i></span>
+              <span>Content Creation</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="portfolio.html" class="drawer-link ">
+          <span>Portfolio</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="blog.html" class="drawer-link ">
+          <span>Blog</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="careers.html" class="drawer-link ">
+          <span>Careers</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="contact.html" class="drawer-link ">
+          <span>Contact</span> <i class="fa-solid fa-chevron-right"></i>
+        </a>
       </div>
     </div>
-    <div style="margin-top:2rem;">
-      <a href="#consultation" class="btn btn-primary" style="width:100%; margin-bottom:0.75rem;">
+    <div style="margin-top:1.5rem;">
+      <a href="contact.html#consultation" class="btn btn-primary" style="width:100%; margin-bottom:0.75rem;">
         Get Free Consultation
       </a>
-      <a href="https://wa.me/919016592958" class="btn btn-whatsapp" style="width:100%;">
+      <a href="https://wa.me/919016592958" class="btn btn-whatsapp" style="width:100%;" target="_blank" rel="noopener">
         <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
       </a>
     </div>
   </aside>
 
-  <!-- Main Content -->
-  <main id="main-content">
-    
-    <!-- Hero Section -->
+  <!-- Main Content Block -->
+  <main id="main-content" class="main-home">
+<!-- Hero Section -->
     <section class="hero-section" id="hero">
       <div class="container hero-grid">
         <div class="hero-content fade-up">
@@ -284,34 +324,34 @@
       </div>
     </section>
 
-    <!-- Live Performance Counters Strip (Fixes F-06: Initial Real Numbers, Animated on Scroll) -->
+    <!-- Agency Impact Metrics Strip (Screenshot Reference: Sleek Rounded Container & Static Values) -->
     <section class="stats-strip" id="stats">
       <div class="container">
-        <div class="glass-card-elevated stats-grid">
+        <div class="stats-grid">
           <div class="stat-card">
             <div class="stat-number-wrapper">
-              <span class="stat-number" data-target="50">50</span>
+              <span class="stat-number">50</span>
               <span class="stat-suffix">+</span>
             </div>
             <div class="stat-label">Projects Delivered</div>
           </div>
           <div class="stat-card">
             <div class="stat-number-wrapper">
-              <span class="stat-number" data-target="30">30</span>
+              <span class="stat-number">30</span>
               <span class="stat-suffix">+</span>
             </div>
             <div class="stat-label">Happy Global Clients</div>
           </div>
           <div class="stat-card">
             <div class="stat-number-wrapper">
-              <span class="stat-number" data-target="240">240</span>
+              <span class="stat-number">240</span>
               <span class="stat-suffix">%</span>
             </div>
             <div class="stat-label">Average Traffic Growth</div>
           </div>
           <div class="stat-card">
             <div class="stat-number-wrapper">
-              <span class="stat-number" data-target="99">99</span>
+              <span class="stat-number">99</span>
               <span class="stat-suffix">%</span>
             </div>
             <div class="stat-label">Client Satisfaction Rate</div>
@@ -1319,127 +1359,82 @@
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Site Footer -->
+  <!-- Common Site Footer -->
   <footer class="site-footer" id="footer">
     <div class="container">
       <div class="footer-grid">
-        <!-- Brand Info -->
         <div class="footer-brand">
-          <a href="index.html" class="brand-logo" aria-label="Qbix Solutions Home">
-            <img src="assets/images/logo-white.png" alt="Qbix Solutions Logo" width="180">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/images/logo-white.png" alt="Qbix Solutions" width="180" height="48" style="height:44px; width:auto; object-fit:contain;">
           </a>
           <p>
-            Qbix Solutions is a results-driven digital marketing and creative engineering agency helping startups, clinics, and businesses expand their digital footprint and revenue online.
+            Qbix Solutions is a full-service digital agency specializing in custom web engineering, technical SEO, performance branding, and multimedia content.
           </p>
-          <div class="footer-social-row">
-            <a href="https://www.linkedin.com/in/ravi-bhatasana-179273340/" target="_blank" rel="noopener" class="social-pill" aria-label="Founder LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/qbixsolutions" target="_blank" rel="noopener" class="social-pill" aria-label="Qbix GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://wa.me/919016592958" target="_blank" rel="noopener" class="social-pill" aria-label="WhatsApp Us">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a href="mailto:ravibhatasana@gmail.com" class="social-pill" aria-label="Email Us">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
+          <div style="display:flex; gap:0.75rem; margin-top:1.25rem;">
+            <a href="https://www.linkedin.com/in/ravi-bhatasana-179273340/" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/qbixsolutions" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/919016592958" target="_blank" rel="noopener" class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4>Quick Navigation</h4>
           <div class="footer-links">
-            <a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a>
-            <a href="about.html"><i class="fa-solid fa-angle-right"></i> About Company</a>
-            <a href="services.html"><i class="fa-solid fa-angle-right"></i> All Services</a>
-            <a href="portfolio.html"><i class="fa-solid fa-angle-right"></i> Portfolio & Demos</a>
-            <a href="blog.html"><i class="fa-solid fa-angle-right"></i> Insights & Blog</a>
-            <a href="careers.html"><i class="fa-solid fa-angle-right"></i> Careers</a>
-            <a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">All Services</a>
+            <a href="portfolio.html">Portfolio & Work</a>
+            <a href="blog.html">Industry Insights</a>
+            <a href="careers.html">Join Our Team</a>
+            <a href="contact.html">Contact Us</a>
           </div>
         </div>
 
-        <!-- Core Services Links -->
         <div class="footer-col">
-          <h4>Our Services</h4>
+          <h4>Agency Services</h4>
           <div class="footer-links">
-            <a href="services/web-development.html"><i class="fa-solid fa-angle-right"></i> Web Development</a>
-            <a href="services/seo-optimization.html"><i class="fa-solid fa-angle-right"></i> SEO Optimization</a>
-            <a href="services/social-media-management.html"><i class="fa-solid fa-angle-right"></i> Social Media Growth</a>
-            <a href="services/graphic-design.html"><i class="fa-solid fa-angle-right"></i> Graphic & UI Design</a>
-            <a href="services/video-editing.html"><i class="fa-solid fa-angle-right"></i> Video & Reels Editing</a>
-            <a href="services/content-creation.html"><i class="fa-solid fa-angle-right"></i> Content Writing</a>
+            <a href="services/web-development.html">Web Development</a>
+            <a href="services/seo-optimization.html">SEO Optimization</a>
+            <a href="services/social-media-management.html">Social Media Growth</a>
+            <a href="services/graphic-design.html">Graphic Design</a>
+            <a href="services/video-editing.html">Video Editing</a>
+            <a href="services/content-creation.html">Content Creation</a>
           </div>
         </div>
 
-        <!-- Contact & Head Office -->
         <div class="footer-col">
-          <h4>Headquarters</h4>
+          <h4>Get In Touch</h4>
           <div class="footer-contact-item">
             <i class="fa-solid fa-location-dot"></i>
-            <div>
-              <strong>Qbix Solutions HQ</strong>
-              <div style="font-size:0.85rem; color:var(--text-dim);">Morbi, Gujarat, India</div>
-              <a href="https://maps.google.com/?q=Morbi,+Gujarat,+India" target="_blank" rel="noopener" style="font-size:0.82rem; color:var(--secondary);">
-                View on Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
+            <div>Morbi, Gujarat, India &bull; Global Operations</div>
           </div>
           <div class="footer-contact-item">
             <i class="fa-solid fa-phone"></i>
-            <div>
-              <a href="tel:+919016592958">+91 90165 92958</a>
-              <div style="font-size:0.75rem; color:var(--text-dim);">Tech Support: <a href="tel:+917203061730" style="color:var(--text-muted);">+91 72030 61730</a></div>
-            </div>
+            <div><a href="tel:+919016592958">+91 90165 92958</a></div>
           </div>
           <div class="footer-contact-item">
             <i class="fa-solid fa-envelope"></i>
-            <div>
-              <a href="mailto:ravibhatasana@gmail.com">ravibhatasana@gmail.com</a>
-              <div style="font-size:0.75rem; color:var(--text-dim);">Careers: <a href="mailto:careers@qbixsolution.com" style="color:var(--text-muted);">careers@qbixsolution.com</a></div>
-            </div>
+            <div><a href="mailto:ravibhatasana@gmail.com">ravibhatasana@gmail.com</a></div>
           </div>
           <div class="footer-contact-item">
             <i class="fa-solid fa-clock"></i>
-            <div>
-              <div>Mon – Sat: 09:00 AM – 06:00 PM</div>
-              <div style="font-size:0.78rem; color:var(--text-dim);">Sunday: Closed</div>
-            </div>
+            <div>Mon – Sat: 09:00 AM – 06:00 PM IST</div>
           </div>
         </div>
       </div>
 
-      <!-- Footer Bottom Legal Strip (Dynamic Year F-12, Dedicated Links F-13) -->
       <div class="footer-bottom">
-        <div>
-          &copy; <span class="current-year">2026</span> <strong>Qbix Solutions</strong>. All Rights Reserved. Empowering digital growth worldwide.
-        </div>
+        <div>&copy; <span class="current-year">2026</span> <strong>Qbix Solutions</strong>. All Rights Reserved.</div>
         <div class="footer-legal-links">
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Service</a>
           <a href="cookies.html">Cookie Policy</a>
-          <a href="sitemap.xml">XML Sitemap</a>
         </div>
       </div>
     </div>
   </footer>
-
-  <!-- Cookie Consent Banner (Fixes F-18) -->
-  <div class="cookie-banner" id="cookie-consent-banner" role="region" aria-label="Cookie consent banner">
-    <h5><i class="fa-solid fa-cookie-bite" style="color:var(--accent-amber);"></i> Cookie & Privacy Preferences</h5>
-    <p>
-      We use essential cookies to maintain system functionality and analytical cookies to understand how visitors interact with our services.
-    </p>
-    <div class="cookie-actions">
-      <button class="btn btn-primary btn-sm" id="btn-cookie-accept">Accept All</button>
-      <button class="btn btn-secondary btn-sm" id="btn-cookie-reject">Essential Only</button>
-    </div>
-  </div>
 
 </body>
 </html>
